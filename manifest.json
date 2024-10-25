@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "SWETER Background Changer",
+  "version": "1.0",
+  "description": "change the background of a website",
+  "permissions": [
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://gametable.org/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://gametable.org/*"
+      ],
+      "js": [
+        "content/content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/sweter.png",
+        "assets/SWETERPNG.png"
+      ],
+      "matches": [
+        "https://gametable.org/*"
+      ]
+    }
+  ]
+}
